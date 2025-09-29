@@ -1,0 +1,28 @@
+# Hugo build output
+/public/
+/resources/_gen/
+hugo_stats.json
+.hugo_build.lock
+
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Frontend / JS dependencies
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# Hugo / Go extras
+*.test
+imports.*
