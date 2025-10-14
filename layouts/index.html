@@ -1,3 +1,90 @@
 {{ define "main" }}
-    <h1 class="text-red-500 underline text-2xl">Hello world!</h1>
+  <section class="-mt-20 relative">
+    <img
+      src="https://images.pexels.com/photos/1137745/pexels-photo-1137745.jpeg?_gl=1*jgx9iy*_ga*NTQ1NTYzODA3LjE3NjA0MDg4NDM.*_ga_8JE65Q40S6*czE3NjA0MDg4NDIkbzEkZzEkdDE3NjA0MDg5MDIkajYwJGwwJGgw"
+      alt="homecafe"
+      class="h-[24rem] object-cover"
+    />
+    <div
+      class="absolute inset-0 bg-[#52681D]/80 flex justify-end flex-col p-4 pb-6 gap-2"
+    >
+      <div class="flex items-center gap-1 mb-2">
+        <div
+          class="flex gap-1 items-center font-medium bg-white rounded-full px-2 py-1 text-xs"
+        >
+          <svg
+            class="text-amber-500 -mt-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none">
+              <path
+                d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+              />
+              <path
+                fill="currentColor"
+                d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z"
+              />
+            </g>
+          </svg>
+          4.8/5 Rating
+        </div>
+        <div
+          class="flex gap-1 items-center font-medium bg-white rounded-full px-2 py-1 text-xs"
+        >
+          <svg
+            class="text-pink-500"
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M2 9.137C2 14 6.02 16.591 8.962 18.911C10 19.729 11 20.5 12 20.5s2-.77 3.038-1.59C17.981 16.592 22 14 22 9.138S16.5.825 12 5.501C7.5.825 2 4.274 2 9.137"
+            />
+          </svg>
+          200+ Loves
+        </div>
+      </div>
+      <h1 class="font-bold text-white text-3xl tracking-wide">
+        Premium Matcha<br />Intimate Home Café
+      </h1>
+      <h2 class="text-white/70 text-xs text-pretty">
+        Seduhan matcha ceremonial-grade yang creamy & earthy, dibuat langsung
+        untuk momen tenangmu di café rumahan yang hangat. Datang dan nikmati
+        pengalamannya.
+      </h2>
+
+      <div class="mt-6 flex flex-wrap gap-2">
+        <button
+          class="shrink-0 grow-0 px-4 py-2 text-sm font-medium text-[#52681D] rounded-full bg-white flex items-center gap-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g fill="currentColor">
+              <path
+                d="m4 19l-.93-.37a1 1 0 0 0 1.125 1.35zm4.706-.936l.474-.881l-.317-.17l-.352.07l.195.98zm-3.082-3.147l.93.37l.163-.414l-.196-.399zM19 12c0 3.246-2.853 6-6.53 6v2c4.641 0 8.53-3.514 8.53-8zM5.941 12c0-3.246 2.854-6 6.53-6V4C7.83 4 3.94 7.514 3.94 12h2zm6.53-6C16.147 6 19 8.754 19 12h2c0-4.486-3.889-8-8.53-8zm0 12c-1.205 0-2.328-.3-3.291-.817l-.948 1.761A8.9 8.9 0 0 0 12.471 20zm-8.276 1.98l4.706-.936l-.39-1.961l-4.706.936l.39 1.962zm2.326-5.506A5.6 5.6 0 0 1 5.94 12h-2c0 1.2.282 2.338.786 3.36zm-1.826.073L3.07 18.631l1.858.738l1.624-4.083l-1.858-.739z"
+              />
+              <circle cx="9" cy="12" r="1" />
+              <circle cx="12.5" cy="12" r="1" />
+              <circle cx="16" cy="12" r="1" />
+            </g>
+          </svg>
+          Reservasi
+        </button>
+        <button
+          class="shrink-0 grow-0 px-4 py-2 text-sm font-medium rounded-full border-2 border-white text-white"
+        >
+          Lihat Menu
+        </button>
+      </div>
+    </div>
+  </section>
 {{ end }}
