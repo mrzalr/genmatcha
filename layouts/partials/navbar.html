@@ -1,4 +1,4 @@
-<header class="p-4 relative z-50">
+<header x-data="Navbar()" class="p-4 relative z-50">
   <nav class="flex justify-between items-center">
     <h1 class="text-lg font-medium text-white">Genmatcha</h1>
     <ul class="hidden">
@@ -9,7 +9,7 @@
       <li><a href="/"></a></li>
     </ul>
     <div>
-      <button class="p-1 rounded-xl">
+      <button x-on:click="openMenu()" class="p-1 rounded-xl">
         <svg
           class="stroke-white"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,4 +29,78 @@
       </button>
     </div>
   </nav>
+
+  {{/* sidebar */}}
+  <div
+    x-cloak
+    x-bind:class="open ? 'translate-x-0' : 'translate-x-full'"
+    class="fixed inset-0 p-4 flex flex-col duration-500 ease-in-out"
+  >
+    <div class="absolute inset-0 -z-50">
+      <img
+        class="absolute w-full h-full object-cover"
+        src="https://i.pinimg.com/1200x/df/58/b2/df58b22138cc8ecae28d000a2488c409.jpg"
+        alt="cafe front"
+      />
+      <div
+        class="absolute inset-0 z-10 duration-1000"
+        x-bind:class="open ? 'bg-[#749b19]/60 delay-700' : 'bg-[#749b19]/100'"
+      ></div>
+    </div>
+    <div class="flex justify-end w-full">
+      <button x-on:click="closeMenu()" class="p-1 rounded-full">
+        <svg
+          class="text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 1024 1024"
+        >
+          <path
+            fill="currentColor"
+            d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504L738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512L828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496L285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512L195.2 285.696a64 64 0 0 1 0-90.496"
+          />
+        </svg>
+      </button>
+    </div>
+    <ul class="flex-1 flex flex-col justify-center gap-6 px-4">
+      <li class="text-5xl tracking-widest font-extralight text-white">
+        <a href="/">Home</a>
+      </li>
+      <li class="italic text-5xl tracking-widest font-extralight text-white">
+        <a href="/">Promo</a>
+      </li>
+      <li class="text-5xl tracking-widest font-extralight text-white">
+        <a href="/">Tentang</a>
+      </li>
+      <li class="text-5xl tracking-widest font-extralight text-white">
+        <a href="/">Menu</a>
+      </li>
+      <li class="text-5xl tracking-widest font-extralight text-white">
+        <a href="/">Contact</a>
+      </li>
+    </ul>
+    <div class="flex justify-center w-full">
+      <h1 class="text-xs font-light text-white">
+        Genmatcha &copy;
+        {{ now.Format "2006" }}
+      </h1>
+    </div>
+  </div>
 </header>
+
+{{ define "script" }}
+  <script>
+    document.addEventListener("alpine:init", () => {
+      Alpine.data("Navbar", () => ({
+        open: false,
+        openMenu() {
+          this.open = true;
+        },
+        closeMenu() {
+          this.open = false;
+        },
+      }));
+    });
+  </script>
+{{ end }}
